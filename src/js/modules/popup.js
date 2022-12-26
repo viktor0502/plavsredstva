@@ -14,13 +14,13 @@ const scrollToLock = () => {
   },
   popupOpen = (e) => {
     popup.classList.add(`open`);
-    scrollLock();
+    scrollToLock();
     e.preventDefault()
     
   },
   popupClose = () => {
     popup.classList.remove(`open`);
-    scrollUnclock();
+    scrollToUnclock();
   };
 
 btnOpen.addEventListener(`click`, popupOpen);

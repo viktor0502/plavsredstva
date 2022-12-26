@@ -57,6 +57,17 @@ li {
     border-radius: 5px;
     overflow: hidden;
 
+    .flag {
+        // background: url(../img/header/flag.png);
+        // width: 80px;
+        // min-height: 60px;
+        // height: 100%;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // border-radius: 5px;
+        height: 120%;
+    }
+
     p {
         font-size: 18px;
         font-weight: 600;
@@ -80,10 +91,13 @@ li {
         background: $hard-blue;
     }
 }
+h3 {
+    font-size: 28px;
+}
 .section__title {
     border-bottom: 3px solid $main-color;
     padding: 0 25px 15px 0;
-    font-size: 28px;
+
     line-height: 41px;
     text-transform: uppercase;
     margin-bottom: 50px;
@@ -187,7 +201,7 @@ header {
         top: 0;
         right: -20px;
     }
-    .header__img-img{
+    .header__img-img {
         width: 100%;
         height: 100%;
     }
@@ -343,7 +357,7 @@ header {
         font-size: 21px;
         font-weight: 400;
     }
-    h2{
+    h2 {
         font-size: 24px;
     }
     .btn {
@@ -683,7 +697,7 @@ footer {
     .container {
         max-width: 1140px;
     }
-    h2{
+    h2 {
         font-size: 28px;
     }
     .nav-contacts__phone,
@@ -693,7 +707,7 @@ footer {
     header {
         .header__title {
             padding-left: 0;
-    padding-top: 100px;
+            padding-top: 100px;
         }
         h1 {
             font-size: 44px;
@@ -707,7 +721,7 @@ footer {
     }
     .benefits {
         padding-top: 0;
-        .benefits__description{
+        .benefits__description {
             max-width: 80%;
         }
     }
@@ -745,6 +759,7 @@ footer {
     }
 }
 @media screen and (max-width: 992px) {
+    
     main {
         row-gap: 50px;
     }
@@ -754,15 +769,14 @@ footer {
             color: $main-color;
         }
     }
-    h1{
+    h1 {
         font-size: 38px;
     }
-    .section__title{
+    .section__title {
         display: flex;
         justify-content: center;
     }
     header {
-        
         .header__title {
             max-width: 80%;
             padding-top: 200px;
@@ -779,7 +793,7 @@ footer {
         .header__btns {
             align-items: center;
         }
-        
+
         .header__img {
             position: absolute;
             max-width: 700px;
@@ -790,8 +804,8 @@ footer {
             transform: translateX(-50%);
             overflow: hidden;
 
-            &::after{
-                content: '';
+            &::after {
+                content: "";
                 position: absolute;
                 width: 100%;
                 height: 99%;
@@ -802,7 +816,6 @@ footer {
                 background: rgba(56, 87, 123, 0.5);
             }
         }
-       
     }
     .benefits {
         .benefits__wrapper {
@@ -815,7 +828,7 @@ footer {
         .benefits__item {
             flex-basis: 40%;
             flex-grow: 1;
-            padding: 15px ;
+            padding: 15px;
             p {
                 font-size: 18px;
             }
@@ -826,26 +839,26 @@ footer {
         }
     }
     .law {
-        .law-title__wrapper{
+        .law-title__wrapper {
             margin-bottom: 50px;
             row-gap: 15px;
         }
-        .law__title--first{
-            h5{
+        .law__title--first {
+            h5 {
                 font-size: 20px;
             }
-            p{
+            p {
                 font-size: 18px;
             }
         }
-        .law__title--second{
+        .law__title--second {
             font-size: 22px;
         }
         .law-categories__wrapper {
             flex-wrap: wrap;
             row-gap: 20px;
         }
-        .btn{
+        .btn {
             margin-top: 50px auto 0;
         }
         .category-item {
@@ -880,63 +893,72 @@ footer {
             }
         }
     }
-    .services{
-        .services__item{
+    .services {
+        .services__item {
             flex-basis: calc(50% - 80px);
         }
-        .services__bg{
+        .services__bg {
             transform: translate(0%, 25%);
         }
     }
-    .steps{
-        .steps__item{
-            max-width: 100%;
+    .steps {
+        .steps__wrapper {
+            row-gap: 30px;
+        }
+        .steps__item {
+            p {
+                font-size: 16px;
+                max-width: 55%;
+            }
+            img {
+                width: 100px;
+            }
+            max-width: 80%;
         }
     }
-    .faq{
-        .faq__wrapper{
+    .faq {
+        .faq__wrapper {
             flex-direction: column;
             row-gap: 20px;
         }
-        .faq__questions{
+        .faq__questions {
             width: 100%;
         }
-        .question__item{
+        .question__item {
             padding: 15px 15px;
             font-size: 18px;
         }
-        .answers__item{
+        .answers__item {
             font-size: 18px;
         }
     }
-    .contacts{
-        .contacts__wrapper{
+    .contacts {
+        .contacts__wrapper {
             flex-direction: column;
             row-gap: 20px;
         }
-        .contacts__content{
+        .contacts__content {
             align-items: center;
             padding-right: 0;
         }
-        .contacts__map{
+        .contacts__map {
             width: 80%;
             height: 400px;
             flex-basis: unset;
-            iframe{
+            iframe {
                 height: 100%;
                 width: 100%;
             }
         }
     }
-    footer{
-        .navbar{
+    footer {
+        .navbar {
             flex-wrap: wrap;
             row-gap: 15px;
         }
-        .rights{
+        .rights {
             width: 100%;
             text-align: center;
-
         }
     }
     .container {
@@ -951,34 +973,33 @@ footer {
     .tablet__call-icon {
         display: block;
     }
-    
 }
 @media screen and (max-width: 767px) {
     .container {
         max-width: 100%;
         padding: 0 15px;
     }
-    .tablet__call-icon{
+    .tablet__call-icon {
         display: none;
     }
-    header{
-        .header__title{
+    header {
+        .header__title {
             row-gap: 50px;
             padding-top: 20%;
         }
-        h1{
+        h1 {
             font-size: 34px;
         }
-        .header__main{
-        min-height: 600px;
+        .header__main {
+            min-height: 600px;
             padding-bottom: 50px;
         }
     }
-    .benefits{
-        .benefits__item{
+    .benefits {
+        .benefits__item {
             flex-basis: 100%;
         }
-        .benefit__item--middle{
+        .benefit__item--middle {
             padding: 25px 15px;
         }
     }
@@ -996,7 +1017,7 @@ footer {
             &::before {
                 top: 44%;
                 transform: rotate(45deg);
-                background:#fff;
+                background: #fff;
             }
             &::after {
                 bottom: 40%;
@@ -1019,22 +1040,25 @@ footer {
         height: 100%;
         z-index: 500;
         color: #fff;
-        font-size: 26px;
+        row-gap: 2em;
         &.active {
             opacity: 1;
             width: 100%;
         }
-        
     }
-    .popup{
-        .popup__title{
+    .nav__link {
+        font-size: 22px;
+    }
+
+    .popup {
+        .popup__title {
             font-size: 26px;
             max-width: 80%;
         }
-        .popup__content{
+        .popup__content {
             padding: 10px;
         }
-        .popup__list{
+        .popup__list {
             font-size: 16px;
         }
         .popup__list:not(:last-child) {
@@ -1042,68 +1066,115 @@ footer {
         }
     }
 }
-@media screen and (max-width: 576px){
-    .all-around{
-        img{
-            height: 100%;
+@media screen and (max-width: 576px) {
+    .logo-img {
+        width: 75px;
+    }
+    .all-around {
+        p {
+            padding: 5px;
+            font-size: 15px;
         }
     }
-    header{
-        .header__main{
+    header {
+        .header__main {
             min-height: 450px;
         }
-        .header__title{
+        .header__title {
             max-width: unset;
         }
-        h1{
+        h1 {
             font-size: 28px;
             line-height: 34px;
             max-width: 80%;
             margin: 0 auto;
         }
-        .btn{
+        .btn {
             display: block;
             width: 100%;
         }
-        .header__btns{
+        .header__btns {
             row-gap: 25px;
             width: 100%;
         }
     }
-    .law{
-        .category-item{
+    .law {
+        .category-item {
             flex-basis: 100%;
         }
     }
-    .services{
-        .services__item{
+    .services {
+        .services__item {
             flex-basis: 100%;
         }
     }
-    .popup{
-        .popup__close{
+    .steps {
+        .steps__wrapper {
+            background-position: left center;
+            row-gap: 2em;
+        }
+        .steps__item {
+            justify-content: end;
+            text-align: unset;
+
+            p {
+                font-size: 15px;
+                max-width: 85%;
+            }
+            img {
+                display: none;
+            }
+        }
+    }
+    .popup {
+        .popup__close {
             top: 5px;
             right: 5px;
         }
     }
 }
-@media screen and (max-width: 500px){
-    header{
-        .header__main{
+@media screen and (max-width: 500px) {
+    h3{
+        font-size: 24px;
+    }
+    header {
+        .header__main {
             min-height: 400px;
         }
     }
-    .benefits{
-        .benefits__description{
+    .benefits {
+        .benefits__description {
             padding-left: 0;
         }
     }
-    .services{
-        .services__bg{
+    .services {
+        .services__bg {
             display: none;
         }
     }
-    main{
-        row-gap: 25px;
+    main {
+        row-gap: 50px;
+    }
+    .steps{
+        .steps__wrapper{
+            padding-left: 50px;
+        }
+        .steps__item{
+            p{
+                max-width: unset;
+            }
+        }
+    }
+    .contacts {
+        .contacts__list {
+            font-size: 16px;
+            padding: 10px;
+            font-weight: 500;
+        }
+        .contacts__item {
+            img {
+                width: 25px;
+            }
+        }
     }
 }

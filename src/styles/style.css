@@ -64,6 +64,9 @@ li {
   border-radius: 5px;
   overflow: hidden;
 }
+.all-around .flag {
+  height: 120%;
+}
 .all-around p {
   font-size: 18px;
   font-weight: 600;
@@ -90,10 +93,13 @@ li {
   background: #0b68bd;
 }
 
+h3 {
+  font-size: 28px;
+}
+
 .section__title {
   border-bottom: 3px solid #38577b;
   padding: 0 25px 15px 0;
-  font-size: 28px;
   line-height: 41px;
   text-transform: uppercase;
   margin-bottom: 50px;
@@ -866,8 +872,18 @@ footer .rights {
   .services .services__bg {
     transform: translate(0%, 25%);
   }
+  .steps .steps__wrapper {
+    row-gap: 30px;
+  }
   .steps .steps__item {
-    max-width: 100%;
+    max-width: 80%;
+  }
+  .steps .steps__item p {
+    font-size: 16px;
+    max-width: 55%;
+  }
+  .steps .steps__item img {
+    width: 100px;
   }
   .faq .faq__wrapper {
     flex-direction: column;
@@ -983,11 +999,14 @@ footer .rights {
     height: 100%;
     z-index: 500;
     color: #fff;
-    font-size: 26px;
+    row-gap: 2em;
   }
   .navbar__menu.active {
     opacity: 1;
     width: 100%;
+  }
+  .nav__link {
+    font-size: 22px;
   }
   .popup .popup__title {
     font-size: 26px;
@@ -1004,8 +1023,12 @@ footer .rights {
   }
 }
 @media screen and (max-width: 576px) {
-  .all-around img {
-    height: 100%;
+  .logo-img {
+    width: 75px;
+  }
+  .all-around p {
+    padding: 5px;
+    font-size: 15px;
   }
   header .header__main {
     min-height: 450px;
@@ -1033,12 +1056,30 @@ footer .rights {
   .services .services__item {
     flex-basis: 100%;
   }
+  .steps .steps__wrapper {
+    background-position: left center;
+    row-gap: 2em;
+  }
+  .steps .steps__item {
+    justify-content: end;
+    text-align: unset;
+  }
+  .steps .steps__item p {
+    font-size: 15px;
+    max-width: 85%;
+  }
+  .steps .steps__item img {
+    display: none;
+  }
   .popup .popup__close {
     top: 5px;
     right: 5px;
   }
 }
 @media screen and (max-width: 500px) {
+  h3 {
+    font-size: 24px;
+  }
   header .header__main {
     min-height: 400px;
   }
@@ -1049,6 +1090,20 @@ footer .rights {
     display: none;
   }
   main {
-    row-gap: 25px;
+    row-gap: 50px;
+  }
+  .steps .steps__wrapper {
+    padding-left: 50px;
+  }
+  .steps .steps__item p {
+    max-width: unset;
+  }
+  .contacts .contacts__list {
+    font-size: 16px;
+    padding: 10px;
+    font-weight: 500;
+  }
+  .contacts .contacts__item img {
+    width: 25px;
   }
 }/*# sourceMappingURL=style.css.map */
