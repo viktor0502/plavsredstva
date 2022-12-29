@@ -8,6 +8,16 @@ body {
   background-color: #e6f1f8;
   color: #38577b;
 }
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #247bcb;
+}
+body::-webkit-scrollbar-track {
+  background: #e0edfa;
+  border-radius: 50px;
+}
 
 main {
   display: flex;
@@ -202,6 +212,16 @@ header .header__btns {
   display: flex;
   flex-direction: column;
   row-gap: 50px;
+}
+header .header__btns .btn {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header__btns .btn svg path {
+  fill: #fff;
 }
 header h1 {
   font-weight: 500;
@@ -416,6 +436,12 @@ header .header__img-img {
   opacity: 0.5;
 }
 
+.steps {
+  background-image: url(../img/steps/uppper-shape.png), url(../img/steps/lower-shape.png);
+  background-position: top right, bottom left;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 40%, 100% 40%;
+}
 .steps .steps__wrapper {
   display: flex;
   flex-direction: column;
@@ -548,6 +574,8 @@ header .header__img-img {
   display: flex;
   align-items: center;
   gap: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px dashed #38577b;
 }
 .contacts .contacts__item .imgs {
   display: flex;
@@ -922,6 +950,7 @@ footer .rights {
   }
   footer .rights {
     width: 100%;
+    font-size: 14px;
     text-align: center;
   }
   .container {
@@ -992,7 +1021,7 @@ footer .rights {
     align-items: center;
     flex-direction: column;
     opacity: 0;
-    left: 0;
+    left: -100%;
     top: 0;
     width: 0;
     transition: 0.4s;
@@ -1004,6 +1033,7 @@ footer .rights {
   .navbar__menu.active {
     opacity: 1;
     width: 100%;
+    left: 0;
   }
   .nav__link {
     font-size: 22px;
@@ -1105,5 +1135,17 @@ footer .rights {
   }
   .contacts .contacts__item img {
     width: 25px;
+  }
+  .contacts .contacts__map {
+    padding: 10px;
+    width: calc(100% - 30px);
+  }
+}
+@media screen and (max-width: 370px) {
+  header .header__btns .btn {
+    padding: 18px;
+  }
+  header .header__btns .btn svg {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
