@@ -77,40 +77,61 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   // Popup
+  function popup(btnOpenSelector, popupSelector, currentPopupSelector) {
+    const btnOpen = document.querySelectorAll(btnOpenSelector),
+      popup = document.querySelector(popupSelector),
+      btnClose = document.querySelector(".popup__close"),
+      popupContent = document.querySelectorAll(currentPopupSelector);
+    //  console.log( popupContent[2])
+       function hideContents(){
+        popupContent.forEach(p=>{
+          p.style.display = 'none'
+        })
+       }
+       function showCurrContent(i){
+        popupContent[i].style.display = 'block'
+       }
+    const scrollToLock = () => {
+        document.body.style.overflow = "hidden";
+      },
+      scrollToUnclock = () => {
+        document.body.style.overflow = "";
+      },
+  
+      popupOpen = (e) => {
+        popup.classList.add(`open`);
+        scrollToLock();
+        e.preventDefault();
+        hideContents()
 
-  const btnOpen = document.querySelector(`.btn-open-popup`),
-    popup = document.querySelector(`.popup`),
-    btnClose = document.querySelector(`.popup__close`);
-  const html = document.getElementsByTagName("html");
 
-  const scrollToLock = () => {
-      document.body.style.overflow = "hidden";
-    },
-    scrollToUnclock = () => {
-      document.body.style.overflow = "";
-    },
-    popupOpen = (e) => {
-      popup.classList.add(`open`);
-      scrollToLock();
-      e.preventDefault();
-    },
-    popupClose = () => {
-      popup.classList.remove(`open`);
-      scrollToUnclock();
-    };
+      },
+      popupClose = () => {
+        popup.classList.remove(`open`);
+        scrollToUnclock();
+      };
 
-  btnOpen.addEventListener(`click`, popupOpen);
-  btnClose.addEventListener(`click`, popupClose);
-  popup.addEventListener(`click`, (e) => {
-    if (e.target === popup) {
-      popupClose();
-    }
-  });
-  window.addEventListener(`keydown`, (el) => {
-    if (el.code === `Escape`) {
-      popupClose();
-    }
-  });
+    btnOpen.forEach((btn, i) => {
+      console.log(i)
+      btn.addEventListener(`click`, (e)=>{
+        popupOpen(e)
+        showCurrContent(i)
+
+      });
+    });
+    btnClose.addEventListener(`click`, popupClose);
+    popup.addEventListener(`click`, (e) => {
+      if (e.target === popup) {
+        popupClose();
+      }
+    });
+    window.addEventListener(`keydown`, (el) => {
+      if (el.code === `Escape`) {
+        popupClose();
+      }
+    });
+  }
+  popup(".btn-open-popup", ".popup", ".popup__content");
 
   // Show-animation + counter
 
